@@ -1,0 +1,427 @@
+11-12 11:37:38.374259  1654  1654 D CS#DiscoveryHandler: [onDeviceDisappeared] deviceWireless : DeviceWirelessID: 78edbb13-5ca0-4651-b94a-ac1c254ef9e7, connectivityType: WIRELESS: IAP2_OVER_BLUETOOTH, deviceName: sharkbaby (2), macAddress: 94:89:78:B4:1D:38, uuid: 948978B41D38, serial: null, wifiMacAddress: 8E:14:06:52:15:A2, available: false
+11-12 11:37:51.096016  1684  1684 D DevicesRepository: tryConnectIAP2WhenConnectBluetooth
+11-12 11:37:51.097882  1684  1684 D DevicesRepository: connectIAP2: connectIAP2 on deviceID: e92fdffa-3dd5-47da-bba7-46d1e3148958
+11-12 11:37:51.098918  1968  1968 I ClientToServiceMessage: Received CONNECT_BLUETOOTH_IAP2 message
+11-12 11:37:51.104743  1968  1968 I CobaltLinkViewerService: Notifying device connection status change: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759 to ESTABLISHING_IAP2_SESSION (reason <EMPTY>)
+11-12 11:37:51.113028  1654  1654 D CS#DiscoveryHandler: [onDeviceConnectionStatusChanged] device: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, status: ESTABLISHING_IAP2_SESSION
+11-12 11:37:51.113106  1654  1654 D CS#VncViewerServiceManager: onDeviceConnectionStatusChanged DeviceID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, status: ESTABLISHING_IAP2_SESSION
+11-12 11:37:51.113182  1654  1654 I CS#CommunicationsHandler: deviceID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, become: ESTABLISHING_IAP2_SESSION, reason: UNKNOWN
+11-12 11:37:51.113489  1654  1654 D CS#DiscoveryHandler: ID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, Name: kali, ConnectionType: iAP2 Bluetooth, ConnectionState: ESTABLISHING_IAP2_SESSION, MacAddress: 00:1A:7D:DA:71:15, UUID: null, Serial: null, WifiMacAddress: null, iAP2Available: 0
+11-12 11:37:51.122067  1684  1684 D DevicesRepository: tryConnectIAP2WhenConnectBluetooth
+11-12 11:37:51.122172  1684  1684 D DevicesRepository: connectIAP2: Already requested
+11-12 11:37:51.130863  1684  1684 D DevicesRepository: tryConnectIAP2WhenConnectBluetooth
+11-12 11:37:51.130949  1684  1684 D DevicesRepository: connectIAP2: Already requested
+11-12 11:37:51.182664  1684  1684 D DevicesRepository: MAC=00:1A:7D:DA:71:15 | Serial=null | name=kali | wMAC=null | type=iAP2 Bluetooth | state=ESTABLISHING_IAP2_SESSION | id=ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759
+11-12 11:37:51.182972  1684  1684 D DevicesRepository: connectionState=ESTABLISHING_IAP2_SESSION | deviceStatus=UNAVAILABLE
+11-12 11:37:51.534982  1654  1963 I ServiceToClientMessage: Received ON_BLUETOOTH_IAP2_CONNECTION_FAILED message
+11-12 11:37:51.535377  1654  1963 I ServiceToClientMessage: Received ON_BLUETOOTH_IAP2_CONNECTION_FAILED message
+11-12 11:52:07.942225  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:52:07.942259  1811  2414 W bt_l2cap: IAP2- L2CEVT_L2CAP_CONNECT_REQ : psm 0x1 remote_bd_addr 94:89:78:b4:1d:38
+11-12 11:52:07.942291  1811  2414 W bt_l2cap: IAP2-  0x1 HANDLE SDP/RFCOMM/MNS
+11-12 11:53:58.885951  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:53:58.886000  1811  2414 W bt_l2cap: IAP2- L2CEVT_L2CAP_CONNECT_REQ : psm 0x1 remote_bd_addr 94:89:78:b4:1d:38
+11-12 11:53:58.886053  1811  2414 W bt_l2cap: IAP2-  0x1 HANDLE SDP/RFCOMM/MNS
+11-12 11:54:06.292319  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:54:06.292352  1811  2414 W bt_l2cap: IAP2- L2CEVT_L2CAP_CONNECT_REQ : psm 0x1 remote_bd_addr 94:89:78:b4:1d:38
+11-12 11:54:06.292385  1811  2414 W bt_l2cap: IAP2-  0x1 HANDLE SDP/RFCOMM/MNS
+11-12 11:55:47.892393  1684  1684 D DevicesRepository: connectIAP2: connectIAP2 on deviceID: 54530ef9-61e2-4330-b04c-c3bd042165f4
+11-12 11:55:47.892859  1968  1968 I ClientToServiceMessage: Received CONNECT_BLUETOOTH_IAP2 message
+11-12 11:55:47.895184  1968  1968 I CobaltLinkViewerService: Notifying device connection status change: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759 to ESTABLISHING_IAP2_SESSION (reason <EMPTY>)
+11-12 11:55:47.899347  1654  1654 D CS#DiscoveryHandler: [onDeviceConnectionStatusChanged] device: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, status: ESTABLISHING_IAP2_SESSION
+11-12 11:55:47.899416  1654  1654 D CS#VncViewerServiceManager: onDeviceConnectionStatusChanged DeviceID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, status: ESTABLISHING_IAP2_SESSION
+11-12 11:55:47.899475  1654  1654 I CS#CommunicationsHandler: deviceID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, become: ESTABLISHING_IAP2_SESSION, reason: UNKNOWN
+11-12 11:55:47.899782  1654  1654 D CS#DiscoveryHandler: ID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, Name: kali, ConnectionType: iAP2 Bluetooth, ConnectionState: ESTABLISHING_IAP2_SESSION, MacAddress: 00:1A:7D:DA:71:15, UUID: null, Serial: null, WifiMacAddress: null, iAP2Available: 0
+11-12 11:55:47.951204  1684  1684 D DevicesRepository: MAC=00:1A:7D:DA:71:15 | Serial=null | name=kali | wMAC=null | type=iAP2 Bluetooth | state=ESTABLISHING_IAP2_SESSION | id=ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759
+11-12 11:55:47.951752  1684  1684 D DevicesRepository: connectionState=ESTABLISHING_IAP2_SESSION | deviceStatus=UNAVAILABLE
+11-12 11:55:48.353184  1654  1963 I ServiceToClientMessage: Received ON_BLUETOOTH_IAP2_CONNECTION_FAILED message
+11-12 11:55:48.353731  1654  1963 I ServiceToClientMessage: Received ON_BLUETOOTH_IAP2_CONNECTION_FAILED message
+11-12 11:55:51.526910  1684  1684 D DevicesRepository: connectIAP2: connectIAP2 on deviceID: 5d7362a7-d771-40e6-802a-399f9d8b9cff
+11-12 11:55:51.527534  1968  1968 I ClientToServiceMessage: Received CONNECT_BLUETOOTH_IAP2 message
+11-12 11:55:51.530321  1968  1968 I CobaltLinkViewerService: Notifying device connection status change: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759 to ESTABLISHING_IAP2_SESSION (reason <EMPTY>)
+11-12 11:55:51.531920  1654  1654 D CS#DiscoveryHandler: [onDeviceConnectionStatusChanged] device: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, status: ESTABLISHING_IAP2_SESSION
+11-12 11:55:51.532065  1654  1654 D CS#VncViewerServiceManager: onDeviceConnectionStatusChanged DeviceID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, status: ESTABLISHING_IAP2_SESSION
+11-12 11:55:51.532137  1654  1654 I CS#CommunicationsHandler: deviceID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, become: ESTABLISHING_IAP2_SESSION, reason: UNKNOWN
+11-12 11:55:51.533503  1654  1654 D CS#DiscoveryHandler: ID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, Name: kali, ConnectionType: iAP2 Bluetooth, ConnectionState: ESTABLISHING_IAP2_SESSION, MacAddress: 00:1A:7D:DA:71:15, UUID: null, Serial: null, WifiMacAddress: null, iAP2Available: 0
+11-12 11:55:51.583099  1684  1684 D DevicesRepository: MAC=00:1A:7D:DA:71:15 | Serial=null | name=kali | wMAC=null | type=iAP2 Bluetooth | state=ESTABLISHING_IAP2_SESSION | id=ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759
+11-12 11:55:51.583424  1684  1684 D DevicesRepository: connectionState=ESTABLISHING_IAP2_SESSION | deviceStatus=UNAVAILABLE
+11-12 11:55:51.707028  1654  1963 I ServiceToClientMessage: Received ON_BLUETOOTH_IAP2_CONNECTION_FAILED message
+11-12 11:55:51.707585  1654  1963 I ServiceToClientMessage: Received ON_BLUETOOTH_IAP2_CONNECTION_FAILED message
+11-12 11:55:53.589056  1684  1684 D DevicesRepository: connectIAP2: connectIAP2 on deviceID: 87543be7-5dde-4973-8626-507e4401741b
+11-12 11:55:53.589510  1968  1968 I ClientToServiceMessage: Received CONNECT_BLUETOOTH_IAP2 message
+11-12 11:55:53.599333  1968  1968 I CobaltLinkViewerService: Notifying device connection status change: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759 to ESTABLISHING_IAP2_SESSION (reason <EMPTY>)
+11-12 11:55:53.601168  1654  1654 D CS#DiscoveryHandler: [onDeviceConnectionStatusChanged] device: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, status: ESTABLISHING_IAP2_SESSION
+11-12 11:55:53.601278  1654  1654 D CS#VncViewerServiceManager: onDeviceConnectionStatusChanged DeviceID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, status: ESTABLISHING_IAP2_SESSION
+11-12 11:55:53.601345  1654  1654 I CS#CommunicationsHandler: deviceID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, become: ESTABLISHING_IAP2_SESSION, reason: UNKNOWN
+11-12 11:55:53.601789  1654  1654 D CS#DiscoveryHandler: ID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, Name: kali, ConnectionType: iAP2 Bluetooth, ConnectionState: ESTABLISHING_IAP2_SESSION, MacAddress: 00:1A:7D:DA:71:15, UUID: null, Serial: null, WifiMacAddress: null, iAP2Available: 0
+11-12 11:55:53.633498  1684  1684 D DevicesRepository: MAC=00:1A:7D:DA:71:15 | Serial=null | name=kali | wMAC=null | type=iAP2 Bluetooth | state=ESTABLISHING_IAP2_SESSION | id=ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759
+11-12 11:55:53.633754  1684  1684 D DevicesRepository: connectionState=ESTABLISHING_IAP2_SESSION | deviceStatus=UNAVAILABLE
+11-12 11:55:54.288401  1654  1963 I ServiceToClientMessage: Received ON_BLUETOOTH_IAP2_CONNECTION_FAILED message
+11-12 11:55:54.288915  1654  1963 I ServiceToClientMessage: Received ON_BLUETOOTH_IAP2_CONNECTION_FAILED message
+11-12 11:55:54.710848  1684  1684 D DevicesRepository: connectIAP2: connectIAP2 on deviceID: abd48639-7eb3-4d9e-b8dd-ebf4b0d2b2c0
+11-12 11:55:54.711715  1968  1968 I ClientToServiceMessage: Received CONNECT_BLUETOOTH_IAP2 message
+11-12 11:55:54.714656  1968  1968 I CobaltLinkViewerService: Notifying device connection status change: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759 to ESTABLISHING_IAP2_SESSION (reason <EMPTY>)
+11-12 11:55:54.717903  1654  1654 D CS#DiscoveryHandler: [onDeviceConnectionStatusChanged] device: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, status: ESTABLISHING_IAP2_SESSION
+11-12 11:55:54.718009  1654  1654 D CS#VncViewerServiceManager: onDeviceConnectionStatusChanged DeviceID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, status: ESTABLISHING_IAP2_SESSION
+11-12 11:55:54.718078  1654  1654 I CS#CommunicationsHandler: deviceID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, become: ESTABLISHING_IAP2_SESSION, reason: UNKNOWN
+11-12 11:55:54.718445  1654  1654 D CS#DiscoveryHandler: ID: ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759, Name: kali, ConnectionType: iAP2 Bluetooth, ConnectionState: ESTABLISHING_IAP2_SESSION, MacAddress: 00:1A:7D:DA:71:15, UUID: null, Serial: null, WifiMacAddress: null, iAP2Available: 0
+11-12 11:55:54.777841  1684  1684 D DevicesRepository: MAC=00:1A:7D:DA:71:15 | Serial=null | name=kali | wMAC=null | type=iAP2 Bluetooth | state=ESTABLISHING_IAP2_SESSION | id=ec0ad0bf-37e9-42f1-b4e9-2fa6f35f8759
+11-12 11:55:54.778224  1684  1684 D DevicesRepository: connectionState=ESTABLISHING_IAP2_SESSION | deviceStatus=UNAVAILABLE
+11-12 11:55:54.890056  1654  1963 I ServiceToClientMessage: Received ON_BLUETOOTH_IAP2_CONNECTION_FAILED message
+11-12 11:55:54.890390  1654  1963 I ServiceToClientMessage: Received ON_BLUETOOTH_IAP2_CONNECTION_FAILED message
+11-12 11:57:40.621592  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:57:40.621630  1811  2414 W bt_l2cap: IAP2- L2CEVT_L2CAP_CONNECT_REQ : psm 0x1 remote_bd_addr 94:89:78:b4:1d:38
+11-12 11:57:40.621667  1811  2414 W bt_l2cap: IAP2-  0x1 HANDLE SDP/RFCOMM/MNS
+11-12 11:57:51.271715  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:57:51.273210  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:57:51.273249  1811  2414 W bt_l2cap: IAP2- L2CEVT_L2CAP_CONNECT_REQ : psm 0x3 remote_bd_addr 94:89:78:b4:1d:38
+11-12 11:57:51.273284  1811  2414 W bt_l2cap: IAP2-  0x3 HANDLE SDP/RFCOMM/MNS
+11-12 11:57:51.279184  1968  4571 I CobaltLink.DiscWrapper: TaskPersistentHandleEntityAppeared: New entity 8 detected. Type 'iap2ProcotolIAP2OverBluetooth'. Discoverer 'iap2'.
+11-12 11:57:51.280629  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:57:51.281546  1968  1968 I DeviceManager: IAP2_OVER_BLUETOOTH device appeared (ID: 48)
+11-12 11:57:51.285563  1654  1654 D CS#DiscoveryHandler: [onDeviceAppeared] device: Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH), connectivityType: IAP2_OVER_BLUETOOTH
+11-12 11:57:51.286029  1654  1654 D CS#DiscoveryHandler: 1. getDeviceName: device info = Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH)
+11-12 11:57:51.286247  1654  1654 D CS#DiscoveryHandler: [putDeviceWireless] device device.id: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivityType: IAP2_OVER_BLUETOOTH
+11-12 11:57:51.286486  1654  1654 D CS#DiscoveryHandler: [DeviceWirelessList] add device DeviceWirelessID: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivityType: WIRELESS: IAP2_OVER_BLUETOOTH, deviceName: sharkbaby (2), macAddress: 94:89:78:B4:1D:38, uuid: null, serial: null, wifiMacAddress: null, available: false
+11-12 11:57:51.359906  1684  1684 D DevicesRepository: connectIAP2: connectIAP2 on deviceID: 7348784e-bc63-4c42-9b33-298f7b1af79d
+11-12 11:57:51.360640  1968  1968 I ClientToServiceMessage: Received CONNECT_BLUETOOTH_IAP2 message
+11-12 11:57:51.362973  1968  1968 I CobaltLinkViewerService: Notifying device connection status change: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7 to ESTABLISHING_IAP2_SESSION (reason <EMPTY>)
+11-12 11:57:51.364347  1654  1654 D CS#DiscoveryHandler: [onDeviceConnectionStatusChanged] device: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, status: ESTABLISHING_IAP2_SESSION
+11-12 11:57:51.364413  1654  1654 D CS#VncViewerServiceManager: onDeviceConnectionStatusChanged DeviceID: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, status: ESTABLISHING_IAP2_SESSION
+11-12 11:57:51.364471  1654  1654 I CS#CommunicationsHandler: deviceID: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, become: ESTABLISHING_IAP2_SESSION, reason: UNKNOWN
+11-12 11:57:51.364863  1654  1654 D CS#DiscoveryHandler: ID: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, Name: sharkbaby (2), ConnectionType: iAP2 Bluetooth, ConnectionState: ESTABLISHING_IAP2_SESSION, MacAddress: 94:89:78:B4:1D:38, UUID: null, Serial: null, WifiMacAddress: null, iAP2Available: 0
+11-12 11:57:51.411828  1684  1684 D DevicesRepository: MAC=94:89:78:B4:1D:38 | Serial=null | name=sharkbaby (2) | wMAC=null | type=iAP2 Bluetooth | state=ESTABLISHING_IAP2_SESSION | id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7
+11-12 11:57:51.412152  1684  1684 D DevicesRepository: connectionState=ESTABLISHING_IAP2_SESSION | deviceStatus=UNAVAILABLE
+11-12 11:57:51.616335  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:57:51.648323  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:57:51.648372  1811  2414 W bt_l2cap: IAP2- L2CEVT_L2CAP_CONNECT_REQ : psm 0x17 remote_bd_addr 94:89:78:b4:1d:38
+11-12 11:57:51.648433  1811  2414 W bt_l2cap: IAP2- 0x17 L2CAP_CONN_PENDING
+11-12 11:57:51.791403  1968  4572 I CobaltLink.DiscWrapper: iap2: iAP2 Discoverer: BT connection established, creating IAP2 interface
+11-12 11:57:51.838672  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:57:51.886164  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:57:51.901697  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:57:51.934483  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:57:51.934535  1811  2414 W bt_l2cap: IAP2- L2CEVT_L2CAP_CONNECT_REQ : psm 0x1f remote_bd_addr 94:89:78:b4:1d:38
+11-12 11:57:51.934579  1811  2414 W bt_l2cap: IAP2- 0x1f L2CAP_CONN_PENDING
+11-12 11:57:51.958711  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:57:52.128654  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:57:52.378917  1811  2414 D bt_utils: IAP2_EIR_UUID : 00000000-deca-fade-deca-deafdecacafe
+11-12 11:57:52.378992  1811  2414 W bt_l2cap: IAP2- L2CEVT_L2CAP_CONNECT_REQ : psm 0x19 remote_bd_addr 94:89:78:b4:1d:38
+11-12 11:57:52.379057  1811  2414 W bt_l2cap: IAP2-  0x19 L2CAP_CONN_CANCEL AVDTP
+11-12 11:57:52.379238  1811  2414 W bt_l2cap: IAP2- callback hsa2Cancelled for device: 94:89:78:b4:1d:38
+11-12 11:57:52.459418  1968  1968 I CobaltLinkViewerService: Notifying device connection status change: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7 to IDLE_WITH_IAP2_SESSION (reason <EMPTY>)
+11-12 11:57:52.461201  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:52.461845  1968  1968 I IAP2SessionManager: Received iAP2 DeviceUuidUpdate: 54CE0A11-1BC9-44E6-B971-4EEFD9E6C1FC
+11-12 11:57:52.463711  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:52.464263  1654  1654 D CS#DiscoveryHandler: [onDeviceConnectionStatusChanged] device: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, status: IDLE_WITH_IAP2_SESSION
+11-12 11:57:52.464390  1654  1654 D CS#VncViewerServiceManager: onDeviceConnectionStatusChanged DeviceID: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, status: IDLE_WITH_IAP2_SESSION
+11-12 11:57:52.464519  1654  1654 I CS#CommunicationsHandler: deviceID: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, become: IDLE_WITH_IAP2_SESSION, reason: UNKNOWN
+11-12 11:57:52.465269  1654  1654 D CS#DiscoveryHandler: ID: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, Name: sharkbaby (2), ConnectionType: iAP2 Bluetooth, ConnectionState: IDLE_WITH_IAP2_SESSION, MacAddress: 94:89:78:B4:1D:38, UUID: null, Serial: null, WifiMacAddress: null, iAP2Available: 0
+11-12 11:57:52.466044  1968  1968 I IAP2SessionManager: Received iAP2 RequestAccessoryWiFiConfigurationInformation
+11-12 11:57:52.477928  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:52.478423  1968  1968 I IAP2SessionManager: Received iAP2 start vehicle status updates request: sendOverallRemainingRange=true, sendOverallRangeWarning=true, sendOutsideTemperature=true
+11-12 11:57:52.497735  1684  1684 D DevicesRepository: MAC=94:89:78:B4:1D:38 | Serial=null | name=sharkbaby (2) | wMAC=null | type=iAP2 Bluetooth | state=IDLE_WITH_IAP2_SESSION | id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7
+11-12 11:57:52.497940  1684  1684 D DevicesRepository: connectionState=IDLE_WITH_IAP2_SESSION | deviceStatus=UNAVAILABLE
+11-12 11:57:52.498067  1684  1684 D DevicesRepository: Device in IDLE_WITH_IAP2_SESSION. CP unavailable. Connect classic bt profiles...
+11-12 11:57:52.525784  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:52.526130  1968  1968 I IAP2SessionManager: Received iAP2 DeviceTimeUpdate, SecondsSinceReferenceDate = 1762923472, TimeZoneOffsetMinutes = 420, DayLightSavingsOffsetMinutes = 0
+11-12 11:57:52.527357  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:52.527593  1968  1968 I IAP2SessionManager: Received iAP2 WirelessCarPlayUpdate - status AVAILABLE
+11-12 11:57:52.528570  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:52.528769  1968  1968 W IAP2SessionManager: Unrecognized iAP2 message received. Type: 0X4E0A
+11-12 11:57:52.529162  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:52.529361  1968  1968 I IAP2SessionManager: Received iAP2 DeviceInformationUpdate, DeviceName = sharkbaby (2)
+11-12 11:57:52.531254  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:52.533328  1968  1968 I IAP2VehicleStatus: Sending initial VehicleStatusUpdate now all initial values have been obtained
+11-12 11:57:52.544437  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:52.004548  1654  1654 D CS#DiscoveryHandler: ID: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, Name: sharkbaby (2), ConnectionType: iAP2 Bluetooth, ConnectionState: IDLE_WITH_IAP2_SESSION, MacAddress: 94:89:78:B4:1D:38, UUID: null, Serial: null, WifiMacAddress: null, iAP2Available: 1
+11-12 11:57:52.033854  1654  1654 D CS#DiscoveryHandler: ID: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, Name: sharkbaby (2), ConnectionType: iAP2 Bluetooth, ConnectionState: IDLE_WITH_IAP2_SESSION, MacAddress: 94:89:78:B4:1D:38, UUID: null, Serial: null, WifiMacAddress: null, iAP2Available: 1
+11-12 11:57:52.050176  1654  1654 D CS#DiscoveryHandler: [onDeviceUpdated] device: Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH)
+11-12 11:57:52.050771  1654  1654 D CS#DiscoveryHandler: 1. getDeviceName: device info = Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH)
+11-12 11:57:52.051367  1654  1654 D CS#DiscoveryHandler: ID: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, Name: sharkbaby (2), ConnectionType: iAP2 Bluetooth, ConnectionState: IDLE_WITH_IAP2_SESSION, MacAddress: 94:89:78:B4:1D:38, UUID: UUID Empty, Serial: null, WifiMacAddress: null, iAP2Available: 1
+11-12 11:57:52.084491  1684  1684 D DevicesRepository: MAC=94:89:78:B4:1D:38 | Serial=null | name=sharkbaby (2) | wMAC=null | type=iAP2 Bluetooth | state=IDLE_WITH_IAP2_SESSION | id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7
+11-12 11:57:52.084829  1684  1684 D DevicesRepository: connectionState=IDLE_WITH_IAP2_SESSION | deviceStatus=UNAVAILABLE
+11-12 11:57:52.085046  1684  1684 D DevicesRepository: Device in IDLE_WITH_IAP2_SESSION. CP available. Cancel Connect classic bt profiles
+11-12 11:57:53.553544  1654  1674 D CS#WifiAndHotspotManager: userStartAaCp: ID: e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, Name: sharkbaby (2), ConnectionType: iAP2 Bluetooth, ConnectionState: IDLE_WITH_IAP2_SESSION, MacAddress: 94:89:78:B4:1D:38, UUID: UUID Empty, Serial: null, WifiMacAddress: null, iAP2Available: 1
+11-12 11:57:53.884367  1968  1968 I CobaltLinkViewer: Activating device 48 with connectivity IAP2_OVER_BLUETOOTH
+11-12 11:57:53.888415  1968  1968 I CobaltLinkViewer: IAP2 over Bluetooth device activated.
+11-12 11:57:53.889365  1968  1968 I CarPlayViewerWrapper: Setting IAP2 identification
+11-12 11:57:53.889742  1968  1968 I CobaltLinkViewer: Start viewer session for connection IAP2_OVER_BLUETOOTH
+11-12 11:57:53.892438  1968  1968 I IAP2SessionManager: Sending iAP2 message to start receiving now playing updates
+11-12 11:57:53.893941  1968  1968 I IAP2SessionManager: Sending iAP2 message to start receiving RouteGuidance updates for displays [6197, 6200]
+11-12 11:57:53.894754  1968  1968 I IAP2SessionManager: Sending iAP2 message to start receiving Communications updates
+11-12 11:57:53.895548  1968  1968 I IAP2SessionManager: Sending iAP2 message to start receiving Call State updates
+11-12 11:57:53.898546  1968  1968 I IAP2SessionManager: Sending iAP2 message to start receiving List updates
+11-12 11:57:53.968723  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:53.974013  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate media attributes: artist='', title=''
+11-12 11:57:53.976191  1968  1968 I IAP2MediaArtworkBroker: No existing file transfer ID. Creating new artwork info item; mapping 38f21849-f761-4289-b94f-a990e3ee08fd <=> 0x80
+11-12 11:57:53.979477  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate playback attributes: status='STOPPED', elapsed time='0'
+11-12 11:57:53.981363  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:53.982291  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate message with no media attributes
+11-12 11:57:53.982948  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate playback attributes: status='STOPPED', elapsed time='0'
+11-12 11:57:53.985494  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:53.986360  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate media attributes: artist='', title=''
+11-12 11:57:53.987487  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate message with no playback attributes
+11-12 11:57:53.988379  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:53.988837  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate message with no media attributes
+11-12 11:57:53.989093  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate playback attributes: status='<EMPTY>', elapsed time='<EMPTY>'
+11-12 11:57:53.990611  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:53.991208  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate media attributes: artist='<EMPTY>', title='<EMPTY>'
+11-12 11:57:53.991655  1968  1968 I IAP2MediaArtworkBroker: No existing file transfer ID. Creating new artwork info item; mapping 82457c06-8f25-4694-a81f-36df6b498ef3 <=> 0x81
+11-12 11:57:53.992740  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate message with no playback attributes
+11-12 11:57:53.993557  1968  1968 I IAP2SessionManager: Parsing new FILE_TRANSFER message
+11-12 11:57:53.994286  1968  1968 I IAP2FileTransferManager: Got a NowPlayingArtworkData setup message: id 0x80, type 0x2, size 0
+11-12 11:57:53.994587  1968  1968 I IAP2MediaArtworkBroker: File transfer ID 0x80 -- zero sized setup message => no image
+11-12 11:57:53.994783  1968  1968 I IAP2MediaArtworkBroker: File transfer ID 0x80 -- zero sized image data
+11-12 11:57:53.995466  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:54.002429  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:54.019823  1968  1968 I IAP2SessionManager: Parsing new FILE_TRANSFER message
+11-12 11:57:54.020397  1968  1968 I IAP2FileTransferManager: Got a NowPlayingArtworkData setup message: id 0x81, type 0x2, size 0
+11-12 11:57:54.020653  1968  1968 I IAP2MediaArtworkBroker: File transfer ID 0x81 -- zero sized setup message => no image
+11-12 11:57:54.020850  1968  1968 I IAP2MediaArtworkBroker: File transfer ID 0x81 -- zero sized image data
+11-12 11:57:54.024058  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:54.033723  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:54.040215  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:54.058796  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:54.059452  1968  1968 I IAP2SessionManager: Received iAP2 CarPlayAvailability: WiredAttributes { available: true usbTransportIdentifier: 000081500019083E2ED8401C } , WirelessAttributes { available: true bluetoothTransportIdentifier: 94:89:78:b4:1d:38 }
+11-12 11:57:54.059867  1968  1968 I IAP2SessionManager: Sending CarPlayStartSession with wireless params
+11-12 11:57:54.064070  1968  1968 I IAP2SessionManager: Using IPV6 LL address fe80::5026:efff:fef2:4854
+11-12 11:57:54.064121  1968  1968 I IAP2SessionManager: SSID: OpenSSID
+11-12 11:57:54.064161  1968  1968 I IAP2SessionManager: Passphrase: E7XMt~v65WN!hj#Wd%2b
+11-12 11:57:54.064208  1968  1968 I IAP2SessionManager: Channel: 36
+11-12 11:57:54.065939  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:54.066237  1968  1968 I IAP2SessionManager: Received iAP2 device transport identifier notification: bluetoothTransportIdentifier=94:89:78:b4:1d:38, usbTransportIdentifier=000081500019083E2ED8401C
+11-12 11:57:54.089502  1654  1654 D CS#DiscoveryHandler: [onDeviceUpdated] device: Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH)
+11-12 11:57:54.090207  1654  1654 D CS#DiscoveryHandler: 1. getDeviceName: device info = Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH)
+11-12 11:57:55.615140  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering event handle 152
+11-12 11:57:55.617196  1654  1654 D CS#DiscoveryHandler: [onDeviceUpdated] device: Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH)
+11-12 11:57:55.617709  1654  1654 D CS#DiscoveryHandler: 1. getDeviceName: device info = Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH)
+11-12 11:57:55.618580  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 1 for 1000 ms
+11-12 11:57:55.633129  1654  1654 D CS#DiscoveryHandler: [onDeviceUpdated] device: Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH)
+11-12 11:57:55.633441  1654  1654 D CS#DiscoveryHandler: 1. getDeviceName: device info = Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH)
+11-12 11:57:55.634196  1654  1654 D CS#PhoneProjectionAvnFocusService: onSessionBegin: connectivityType = IAP2_OVER_BLUETOOTH, readStoreData= false, hasEVS= false
+11-12 11:57:55.837197  1968  1968 I ClientToServiceMessage: Received DISCONNECT_BLUETOOTH_IAP2 message
+11-12 11:57:55.872167  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: iAP2 Link established
+11-12 11:57:55.876697  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Identification Information request received
+11-12 11:57:55.878177  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 control session message #0xb400ee1f6bf04921 to iAP2 link queue.
+11-12 11:57:55.886100  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04921.
+11-12 11:57:55.943098  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Identification completed
+11-12 11:57:55.943605  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Certificate serial number request received
+11-12 11:57:55.956322  1968 18308 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Certificate serial number retrieved
+11-12 11:57:55.960358  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 control session message #0xb400ee1f6bf04922 to iAP2 link queue.
+11-12 11:57:55.961169  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04922.
+11-12 11:57:55.978308  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Certificate request received
+11-12 11:57:56.087319  1968 18308 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Certificate retrieved
+11-12 11:57:56.090621  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 control session message #0xb400ee1f6bf04923 to iAP2 link queue.
+11-12 11:57:56.091712  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04923.
+11-12 11:57:56.109352  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Challenge response request received
+11-12 11:57:56.552376  1968 18308 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Challenge response retrieved
+11-12 11:57:56.552718  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 control session message #0xb400ee1f6bf04924 to iAP2 link queue.
+11-12 11:57:56.552969  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04924.
+11-12 11:57:56.585690  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Authentication completed
+11-12 11:57:56.586023  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Session established
+11-12 11:57:56.586831  1968  1968 I IAP2SessionManager: Sending iAP2 message to start receiving now playing updates
+11-12 11:57:56.587461  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04925 to iAP2 link queue.
+11-12 11:57:56.587784  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04925.
+11-12 11:57:56.587857  1968  1968 I IAP2SessionManager: Sending iAP2 message to start receiving RouteGuidance updates for displays [6197, 6200]
+11-12 11:57:56.588182  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04926 to iAP2 link queue.
+11-12 11:57:56.588366  1968  1968 I IAP2SessionManager: Sending iAP2 message to start receiving Communications updates
+11-12 11:57:56.588409  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04926.
+11-12 11:57:56.588663  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04927 to iAP2 link queue.
+11-12 11:57:56.588800  1968  1968 I IAP2SessionManager: Sending iAP2 message to start receiving Call State updates
+11-12 11:57:56.588870  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04927.
+11-12 11:57:56.589196  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04928 to iAP2 link queue.
+11-12 11:57:56.589366  1968  1968 I IAP2SessionManager: Sending iAP2 message to start receiving List updates
+11-12 11:57:56.589433  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04928.
+11-12 11:57:56.590419  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04929 to iAP2 link queue.
+11-12 11:57:56.590884  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04929.
+11-12 11:57:56.591099  1968  1968 I IAP2SessionManager: Sending iAP2 message to start receiving Power updates
+11-12 11:57:56.597086  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0492a to iAP2 link queue.
+11-12 11:57:56.597614  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0492a.
+11-12 11:57:56.598875  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:56.599172  1968  1968 I IAP2SessionManager: Received iAP2 DeviceUuidUpdate: 54CE0A11-1BC9-44E6-B971-4EEFD9E6C1FC
+11-12 11:57:56.599378  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:56.599447  1968  1968 I IAP2SessionManager: Received iAP2 RequestAccessoryWiFiConfigurationInformation
+11-12 11:57:56.605462  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0492b to iAP2 link queue.
+11-12 11:57:56.605854  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0492b.
+11-12 11:57:56.606129  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:56.606697  1968  1968 I IAP2SessionManager: Received iAP2 start vehicle status updates request: sendOverallRemainingRange=true, sendOverallRangeWarning=true, sendOutsideTemperature=true
+11-12 11:57:56.623900  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:56.624511  1968  1968 I IAP2SessionManager: Received iAP2 WirelessCarPlayUpdate - status AVAILABLE
+11-12 11:57:56.626082  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:56.626361  1968  1968 I IAP2SessionManager: Received iAP2 device transport identifier notification: bluetoothTransportIdentifier=94:89:78:b4:1d:38, usbTransportIdentifier=000081500019083E2ED8401C
+11-12 11:57:56.628007  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:56.628313  1968  1968 I IAP2SessionManager: Received iAP2 DeviceTimeUpdate, SecondsSinceReferenceDate = 1762923477, TimeZoneOffsetMinutes = 420, DayLightSavingsOffsetMinutes = 0
+11-12 11:57:56.639279  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 2 for 1967 ms
+11-12 11:57:56.641087  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 3 for 1000 ms
+11-12 11:57:56.668868  1654  1654 D CS#DiscoveryHandler: [onDeviceUpdated] device: Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH)
+11-12 11:57:56.669629  1654  1654 D CS#DiscoveryHandler: 1. getDeviceName: device info = Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH)
+11-12 11:57:56.683207  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:56.684017  1968  1968 W IAP2SessionManager: Unrecognized iAP2 message received. Type: 0X4E0A
+11-12 11:57:56.686676  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:56.687237  1968  1968 I IAP2SessionManager: Received iAP2 DeviceInformationUpdate, DeviceName = sharkbaby (2)
+11-12 11:57:56.693178  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:56.693846  1968  1968 I IAP2SessionManager: Received iAP2 start location information request: gpsFixData=true, recommendedMinSpecificGPSTransitData=true, gpsSatellitesInView=false, vehicleSpeedData=true, vehicleGyroData=false, vehicleAccelerometerData=false, vehicleHeadingData=false
+11-12 11:57:57.002050  1654  1654 D CS#DiscoveryHandler: [onDeviceUpdated] device: Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH)
+11-12 11:57:57.002889  1654  1654 D CS#DiscoveryHandler: 1. getDeviceName: device info = Device(id=e0e66a47-7d53-4f6e-a938-6e559e8ad2f7, connectivity=IAP2_OVER_BLUETOOTH)
+11-12 11:57:57.034005  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:57.034746  1968  1968 I IAP2SessionManager: Received iAP2 GPRMC status values notification
+11-12 11:57:57.035890  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:57.036357  1968  1968 I IAP2SessionManager: Received iAP2 GPRMC status values notification
+11-12 11:57:57.039358  1968  1968 I IAP2VehicleStatus: Sending initial VehicleStatusUpdate now all initial values have been obtained
+11-12 11:57:57.040291  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0492c to iAP2 link queue.
+11-12 11:57:57.041016  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0492c.
+11-12 11:57:57.041254  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:57.042058  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate media attributes: artist='', title=''
+11-12 11:57:57.042465  1968  1968 I IAP2MediaArtworkBroker: No existing file transfer ID. Creating new artwork info item; mapping e57c4703-548a-4060-819a-0c8436d71a8d <=> 0x80
+11-12 11:57:57.044298  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate playback attributes: status='STOPPED', elapsed time='0'
+11-12 11:57:57.045868  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:57.046315  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate message with no media attributes
+11-12 11:57:57.046436  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate playback attributes: status='STOPPED', elapsed time='0'
+11-12 11:57:57.047351  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:57.048576  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate media attributes: artist='', title=''
+11-12 11:57:57.049509  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate message with no playback attributes
+11-12 11:57:57.050078  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:57.050540  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate media attributes: artist='<EMPTY>', title='<EMPTY>'
+11-12 11:57:57.052323  1968  1968 I IAP2MediaArtworkBroker: No existing file transfer ID. Creating new artwork info item; mapping 6cfe537d-d213-43ce-b7ca-71c139d984e3 <=> 0x81
+11-12 11:57:57.053057  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate message with no playback attributes
+11-12 11:57:57.053419  1968  1968 I IAP2SessionManager: Parsing new FILE_TRANSFER message
+11-12 11:57:57.054093  1968  1968 I IAP2FileTransferManager: Got a NowPlayingArtworkData setup message: id 0x80, type 0x2, size 0
+11-12 11:57:57.054370  1968  1968 I IAP2MediaArtworkBroker: File transfer ID 0x80 -- zero sized setup message => no image
+11-12 11:57:57.054505  1968  1968 I IAP2MediaArtworkBroker: File transfer ID 0x80 -- zero sized image data
+11-12 11:57:57.086830  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:57.087161  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate message with no media attributes
+11-12 11:57:57.087301  1968  1968 I IAP2SessionManager: Received iAP2 NowPlayingUpdate playback attributes: status='<EMPTY>', elapsed time='<EMPTY>'
+11-12 11:57:57.088182  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:57.093465  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:57.105585  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:57.111917  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:57.118924  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:57.119301  1968  1968 I IAP2SessionManager: Received iAP2 PowerUpdate,MaximumCurrentDrawnFromAccessory = null, DeviceBatteryWillChargeIfPowerIsPresent = null, IsExternalChargerConnected = null, BatteryChargingState = null, BatteryChargeLevel = 100
+11-12 11:57:57.128550  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:57:57.164000  1968  1968 I IAP2SessionManager: Parsing new FILE_TRANSFER message
+11-12 11:57:57.164770  1968  1968 I IAP2FileTransferManager: Got a NowPlayingArtworkData setup message: id 0x81, type 0x2, size 0
+11-12 11:57:57.164971  1968  1968 I IAP2MediaArtworkBroker: File transfer ID 0x81 -- zero sized setup message => no image
+11-12 11:57:57.165084  1968  1968 I IAP2MediaArtworkBroker: File transfer ID 0x81 -- zero sized image data
+11-12 11:57:57.533865  1968  1968 I IAP2LocationHandler: PASCD String: $PASCD,17877.092,C,P,0,2,0.00,0.000,0.16,0.000*54
+11-12 11:57:57.535221  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0492d to iAP2 link queue.
+11-12 11:57:57.535557  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0492d.
+11-12 11:57:58.037210  1968  1968 I IAP2LocationHandler: PASCD String: $PASCD,17877.757,C,P,0,1,0.00,0.000*6E
+11-12 11:57:58.037929  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0492e to iAP2 link queue.
+11-12 11:57:58.038390  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0492e.
+11-12 11:57:58.038927  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 4 for 2000 ms
+11-12 11:57:58.540196  1968  1968 I IAP2LocationHandler: PASCD String: $PASCD,17878.311,C,P,0,1,0.00,0.000*67
+11-12 11:57:58.540924  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0492f to iAP2 link queue.
+11-12 11:57:58.541301  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0492f.
+11-12 11:57:58.927458  1968 18298 W CarPlaySDK: CarPlayClient: IAP2SessionManager: No record of Timer ID 2, it may have been removed
+11-12 11:57:59.042465  1968  1968 I IAP2LocationHandler: PASCD String: $PASCD,17878.756,C,P,0,1,0.00,0.000*60
+11-12 11:57:59.042981  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04930 to iAP2 link queue.
+11-12 11:57:59.043244  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04930.
+11-12 11:57:59.544020  1968  1968 I IAP2LocationHandler: PASCD String: $PASCD,17879.256,C,P,0,1,0.00,0.000*64
+11-12 11:57:59.544746  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04931 to iAP2 link queue.
+11-12 11:57:59.545157  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04931.
+11-12 11:58:00.046804  1968  1968 I IAP2LocationHandler: PASCD String: $PASCD,17879.735,C,P,0,1,0.00,0.000*64
+11-12 11:58:00.047570  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04932 to iAP2 link queue.
+11-12 11:58:00.047943  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04932.
+11-12 11:58:00.549444  1968  1968 I IAP2LocationHandler: PASCD String: $PASCD,17880.257,C,P,0,1,0.00,0.000*63
+11-12 11:58:00.550163  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04933 to iAP2 link queue.
+11-12 11:58:00.550556  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04933.
+11-12 11:58:00.550964  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 5 for 2000 ms
+11-12 11:58:00.929642  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 6 for 1000 ms
+11-12 11:58:00.929883  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 11:58:02.571473  1968 18298 W CarPlaySDK: CarPlayClient: IAP2SessionManager: No record of Timer ID 5, it may have been removed
+11-12 11:58:10.139168  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04934 to iAP2 link queue.
+11-12 11:58:10.139540  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04934.
+11-12 11:58:10.139915  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 7 for 2000 ms
+11-12 11:59:05.563332  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04935 to iAP2 link queue.
+11-12 11:59:05.563720  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04935.
+11-12 11:59:05.564095  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 8 for 2000 ms
+11-12 11:59:16.871258  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04936 to iAP2 link queue.
+11-12 11:59:16.871768  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04936.
+11-12 11:59:16.872244  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 9 for 2000 ms
+11-12 11:59:33.412441  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04937 to iAP2 link queue.
+11-12 11:59:33.412902  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04937.
+11-12 11:59:33.413447  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 10 for 2000 ms
+11-12 11:59:43.181528  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04938 to iAP2 link queue.
+11-12 11:59:43.181793  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04938.
+11-12 11:59:43.182139  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 11 for 2000 ms
+11-12 12:00:02.190969  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04939 to iAP2 link queue.
+11-12 12:00:02.191243  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04939.
+11-12 12:00:02.191619  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 12 for 2000 ms
+11-12 12:00:20.931075  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0493a to iAP2 link queue.
+11-12 12:00:20.931481  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0493a.
+11-12 12:00:20.931967  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 13 for 2000 ms
+11-12 12:01:17.570762  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0493b to iAP2 link queue.
+11-12 12:01:17.571199  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0493b.
+11-12 12:01:17.571727  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 14 for 2000 ms
+11-12 12:01:33.557071  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0493c to iAP2 link queue.
+11-12 12:01:33.557466  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0493c.
+11-12 12:01:33.557846  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 15 for 2000 ms
+11-12 12:02:18.680106  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0493d to iAP2 link queue.
+11-12 12:02:18.680509  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0493d.
+11-12 12:02:18.681055  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 16 for 2000 ms
+11-12 12:02:40.179992  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 17 for 1000 ms
+11-12 12:02:40.180137  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 12:02:40.180463  1968  1968 I IAP2SessionManager: Received iAP2 start location information request: gpsFixData=true, recommendedMinSpecificGPSTransitData=true, gpsSatellitesInView=false, vehicleSpeedData=true, vehicleGyroData=false, vehicleAccelerometerData=false, vehicleHeadingData=false
+11-12 12:02:40.242174  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 12:02:40.242595  1968  1968 I IAP2SessionManager: Received iAP2 GPRMC status values notification
+11-12 12:02:40.697626  1968  1968 I IAP2LocationHandler: PASCD String: $PASCD,18160.243,C,P,0,2,0.00,0.000,0.17,0.000*5B
+11-12 12:02:40.698486  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0493e to iAP2 link queue.
+11-12 12:02:40.698957  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0493e.
+11-12 12:02:41.199876  1968  1968 I IAP2LocationHandler: PASCD String: $PASCD,18160.917,C,P,0,1,0.00,0.000*64
+11-12 12:02:41.200498  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0493f to iAP2 link queue.
+11-12 12:02:41.200903  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0493f.
+11-12 12:02:41.201304  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 18 for 2000 ms
+11-12 12:02:41.701292  1968  1968 I IAP2LocationHandler: PASCD String: $PASCD,18161.420,C,P,0,1,0.00,0.000*6C
+11-12 12:02:41.701696  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04940 to iAP2 link queue.
+11-12 12:02:41.701917  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04940.
+11-12 12:02:42.202798  1968  1968 I IAP2LocationHandler: PASCD String: $PASCD,18161.916,C,P,0,1,0.00,0.000*64
+11-12 12:02:42.203227  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04941 to iAP2 link queue.
+11-12 12:02:42.203440  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04941.
+11-12 12:02:42.613939  1968  1968 I IAP2SessionManager: Parsing new CONTROL message
+11-12 12:02:55.100488  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04942 to iAP2 link queue.
+11-12 12:02:55.100951  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04942.
+11-12 12:02:55.101465  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 19 for 2000 ms
+11-12 12:03:47.336305  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04943 to iAP2 link queue.
+11-12 12:03:47.336736  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04943.
+11-12 12:03:47.337265  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 20 for 2000 ms
+11-12 12:04:00.767020  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04944 to iAP2 link queue.
+11-12 12:04:00.767290  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04944.
+11-12 12:04:00.767648  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 21 for 2000 ms
+11-12 12:04:02.788151  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04944.
+11-12 12:04:02.788514  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 22 for 2000 ms
+11-12 12:04:04.809220  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04944.
+11-12 12:04:04.809651  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 23 for 2000 ms
+11-12 12:04:12.873987  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04945 to iAP2 link queue.
+11-12 12:04:12.874453  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04945.
+11-12 12:04:12.874888  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 24 for 2000 ms
+11-12 12:04:26.354063  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04946 to iAP2 link queue.
+11-12 12:04:26.354308  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04946.
+11-12 12:04:26.354642  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 25 for 2000 ms
+11-12 12:04:35.259171  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04947 to iAP2 link queue.
+11-12 12:04:35.259504  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04947.
+11-12 12:04:35.259915  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 26 for 2000 ms
+11-12 12:04:50.586060  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04948 to iAP2 link queue.
+11-12 12:04:50.586578  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04948.
+11-12 12:04:50.586994  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 27 for 2000 ms
+11-12 12:05:21.208303  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf04949 to iAP2 link queue.
+11-12 12:05:21.208699  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf04949.
+11-12 12:05:21.209134  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 28 for 2000 ms
+11-12 12:05:35.412915  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0494a to iAP2 link queue.
+11-12 12:05:35.413175  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0494a.
+11-12 12:05:35.413495  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 29 for 2000 ms
+11-12 12:05:37.434309  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0494a.
+11-12 12:05:37.434874  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 30 for 2000 ms
+11-12 12:05:39.455576  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0494a.
+11-12 12:05:39.456055  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 31 for 2000 ms
+11-12 12:05:41.477023  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0494a.
+11-12 12:05:42.873870  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 32 for 2000 ms
+11-12 12:05:46.397063  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0494b to iAP2 link queue.
+11-12 12:05:46.397415  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0494b.
+11-12 12:05:46.397959  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 33 for 2000 ms
+11-12 12:06:20.125974  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0494c to iAP2 link queue.
+11-12 12:06:20.126548  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0494c.
+11-12 12:06:20.127023  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 34 for 2000 ms
+11-12 12:06:34.833543  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending iAP2 message #0xb400ee1f6bf0494d to iAP2 link queue.
+11-12 12:06:34.834034  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0494d.
+11-12 12:06:34.834555  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Registering timeout with id 35 for 2000 ms
+11-12 12:06:36.855095  1968 18298 I CarPlaySDK: CarPlayClient: IAP2SessionManager: Sending dequeued iAP2 message #0xb400ee1f6bf0494d.
