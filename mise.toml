@@ -2,6 +2,21 @@
 python = "3.11"
 uv = "latest"
 
+[tasks.bootstrap-fedora]
+description = "Install Fedora system packages required to build/use the Bluetooth probe"
+run = '''
+set -eu
+sudo dnf install -y \
+  gcc gcc-c++ \
+  pkgconf-pkg-config \
+  cairo-devel \
+  glib2-devel \
+  gobject-introspection-devel \
+  libffi-devel \
+  dbus-devel \
+  bluez bluez-tools
+'''
+
 [tasks.setup]
 description = "Create/sync the uv virtualenv and install development dependencies"
 run = "uv sync"
