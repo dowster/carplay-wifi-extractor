@@ -2,6 +2,41 @@
 python = "3.11"
 uv = "latest"
 
+[tasks.bootstrap]
+description = "Install native Linux dependencies for the current distro"
+run = '''
+set -eu
+. /etc/os-release
+case "${ID:-}" in
+  ubuntu|debian)
+    mise run bootstrap-ubuntu
+    ;;
+  fedora)
+    mise run bootstrap-fedora
+    ;;
+  *)
+    echo "Unsupported distro ID: ${ID:-unknown}. Use docs/BLUETOOTH_ROUTE_GUIDANCE_PROBE.md for package requirements." >&2
+    exit 1
+    ;;
+esac
+'''
+
+[tasks.bootstrap-ubuntu]
+description = "Install Ubuntu/Debian system packages required to build/use the Bluetooth probe"
+run = '''
+set -eu
+sudo apt-get update
+sudo apt-get install -y \
+  bluez \
+  build-essential \
+  pkg-config \
+  libcairo2-dev \
+  libdbus-1-dev \
+  libglib2.0-dev \
+  libgirepository1.0-dev \
+  libffi-dev
+'''
+
 [tasks.bootstrap-fedora]
 description = "Install Fedora system packages required to build/use the Bluetooth probe"
 run = '''
