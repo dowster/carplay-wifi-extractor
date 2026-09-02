@@ -1,0 +1,26 @@
+[project]
+name = "carplay-wifi-extractor"
+version = "0.0.0"
+description = "Experimental iAP2 / CarPlay protocol tooling"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "dbus-python>=1.3.2",
+    "PyGObject>=3.46.0",
+    "smbus2>=0.4.3",
+]
+
+[project.optional-dependencies]
+full = [
+    "functionfs==0.8.0",
+    "hid==1.0.4",
+    "libusb1==2.0.1",
+    "zeroconf>=0.38.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.uv]
+package = false
