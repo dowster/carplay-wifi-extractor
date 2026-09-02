@@ -24,12 +24,6 @@ def ask(prompt):
         return input(prompt)
 
 
-# def set_trusted(path):
-#    props = dbus.Interface(bus.get_object(BUS_NAME, path),
-#                           "org.freedesktop.DBus.Properties")
-#    props.Set("org.bluez.Device1", "Trusted", True)
-
-
 class Rejected(dbus.DBusException):
     _dbus_error_name = "org.bluez.Error.Rejected"
 
@@ -70,7 +64,7 @@ class Agent(dbus.service.Object):
 
     @dbus.service.method(AGENT_INTERFACE, in_signature="o", out_signature="")
     def RequestAuthorization(self, device):
-        print("RequestAuthorization (%s)" % (device))
+        print("RequestAuthorization (%s)" % device)
 
     @dbus.service.method(AGENT_INTERFACE, in_signature="", out_signature="")
     def Cancel(self):
@@ -113,71 +107,37 @@ CHANNEL = 3
 IAP_RECORD = f"""
 <?xml version="1.0" encoding="UTF-8" ?>
 <record>
-    <attribute id="0x0001">
-        <sequence>
-            <uuid value="{IAP_SERVER_UUID}" />
-        </sequence>
-    </attribute>
-    <attribute id="0x0002">
-        <uint32 value="0x00000000" />
-    </attribute>
+    <attribute id="0x0001"><sequence><uuid value="{IAP_SERVER_UUID}" /></sequence></attribute>
+    <attribute id="0x0002"><uint32 value="0x00000000" /></attribute>
     <attribute id="0x0004">
         <sequence>
-            <sequence>
-                <uuid value="0x0100" />
-            </sequence>	
-            <sequence>
-                <uuid value="0x0003" />
-                <uint8 value="0x{CHANNEL:02x}" />
-            </sequence>
+            <sequence><uuid value="0x0100" /></sequence>
+            <sequence><uuid value="0x0003" /><uint8 value="0x{CHANNEL:02x}" /></sequence>
         </sequence>
     </attribute>
-    <attribute id="0x0005">
-        <sequence>
-            <uuid value="0x1002" />
-        </sequence>
-    </attribute>
+    <attribute id="0x0005"><sequence><uuid value="0x1002" /></sequence></attribute>
     <attribute id="0x0006">
         <sequence>
-            <uint16 value="0x656e" />
-            <uint16 value="0x006a" />
-            <uint16 value="0x0100" />
-            <uint16 value="0x6672" />
-            <uint16 value="0x006a" />
-            <uint16 value="0x0110" />
-            <uint16 value="0x6465" />
-            <uint16 value="0x006a" />
-            <uint16 value="0x0120" />
-            <uint16 value="0x6a61" />
-            <uint16 value="0x006a" />
-            <uint16 value="0x0130" />
+            <uint16 value="0x656e" /><uint16 value="0x006a" /><uint16 value="0x0100" />
+            <uint16 value="0x6672" /><uint16 value="0x006a" /><uint16 value="0x0110" />
+            <uint16 value="0x6465" /><uint16 value="0x006a" /><uint16 value="0x0120" />
+            <uint16 value="0x6a61" /><uint16 value="0x006a" /><uint16 value="0x0130" />
         </sequence>
     </attribute>
-    <attribute id="0x0008">
-        <uint8 value="0xff" />
-    </attribute>
-    <attribute id="0x0009">
-        <sequence>
-            <sequence>
-                <uuid value="0x1101" />
-                <uint16 value="0x0100" />
-            </sequence>
-        </sequence>
-    </attribute>
-    <attribute id="0x0100">
-        <text value="Wireless iAP" />
-    </attribute>
+    <attribute id="0x0008"><uint8 value="0xff" /></attribute>
+    <attribute id="0x0009"><sequence><sequence><uuid value="0x1101" /><uint16 value="0x0100" /></sequence></sequence></attribute>
+    <attribute id="0x0100"><text value="Wireless iAP" /></attribute>
 </record>
 """
 
 
 class BluetoothTransport:
-    def __init__(self, on_connection, loop, adapter: str = "hci0"):
-
+    def __init__(self, on_connection, loop, adapter: str = "hci0", advertise_bonjour: bool = True):
         self._glib_loop = GLib.MainLoop()
         self._loop = loop
         self.on_connection = on_connection
         self._adapter = adapter
+        self._advertise_bonjour = advertise_bonjour
         self._adapter_path = f"/org/bluez/{adapter}"
         self._adapter_tag = adapter.replace("/", "_").replace(":", "").replace(".", "_")
         threading.Thread(target=self._bluetooth_thread, daemon=True).start()
@@ -206,11 +166,14 @@ class BluetoothTransport:
         adapter.Set("org.bluez.Adapter1", 'Powered', True)
         adapter.Set("org.bluez.Adapter1", 'Discoverable', True)
         adapter.Set("org.bluez.Adapter1", 'Pairable', True)
-        try:
-            adapter_addr = str(adapter.Get("org.bluez.Adapter1", "Address"))
-            carplay_bonjour.start_service(adapter_addr)
-        except dbus.DBusException as exc:
-            print(f"[bluez] Unable to read adapter address for Bonjour: {exc}.")
+        if self._advertise_bonjour:
+            try:
+                adapter_addr = str(adapter.Get("org.bluez.Adapter1", "Address"))
+                carplay_bonjour.start_service(adapter_addr)
+            except dbus.DBusException as exc:
+                print(f"[bluez] Unable to read adapter address for Bonjour: {exc}.")
+        else:
+            print("[bluez] CarPlay Bonjour advertisement disabled (Bluetooth-only probe mode).")
 
         server_path = f"/org/bluez/{self._adapter_tag}/iap_server"
         iapServerProfile = IAPProfile(bus, server_path, self.on_connection, self._loop)
@@ -231,5 +194,4 @@ class BluetoothTransport:
         if self._glib_loop:
             self._glib_loop.run()
         profileManager.UnregisterProfile(iapServerProfile)
-        agent_manager.UnregisterAgent(agent)
         agent_manager.UnregisterAgent(agent)
