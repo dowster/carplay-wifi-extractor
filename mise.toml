@@ -60,6 +60,34 @@ run = "uv sync"
 description = "Install dependencies used by the wider original example code"
 run = "uv sync --extra full"
 
+[tasks.prepare-adapter]
+description = "Prepare the selected Bluetooth adapter for head-unit style discovery"
+run = '''
+set -eu
+adapter="${IAP2_ADAPTER:-hci0}"
+if ! command -v hciconfig >/dev/null 2>&1; then
+  echo "hciconfig is required for this experiment (normally provided by the bluez package)." >&2
+  exit 1
+fi
+echo "Preparing $adapter"
+sudo hciconfig "$adapter" up
+sudo hciconfig "$adapter" class 0x7a020c
+sudo hciconfig "$adapter" piscan
+hciconfig "$adapter"
+'''
+
+[tasks.prepare-adapter-eir]
+description = "EXPERIMENTAL: apply the original project's captured iAP2/CarPlay inquiry data"
+run = '''
+set -eu
+adapter="${IAP2_ADAPTER:-hci0}"
+inqdata="0e0972617370626572727970693031020a00091002006b1d460237051107FFCACADEAFDECADEDEFACADE000000000d0950455547454f2d3633383400110600000000DECAFADEDECADEAFDECACAFF1107D31FBF505D572797A24041CD484388EC"
+echo "Applying captured experimental inquiry data to $adapter"
+echo "NOTE: this blob comes from the original project and contains captured identity data; use only for protocol testing."
+sudo hciconfig "$adapter" inqdata "$inqdata"
+hciconfig "$adapter" inqdata
+'''
+
 [tasks.doctor]
 description = "Check the Bluetooth-route-guidance Python environment and host tools"
 run = '''
@@ -72,7 +100,7 @@ import smbus2
 print(f"python: {sys.version.split()[0]}")
 print("python imports: dbus, gi/GLib, smbus2: ok")
 PY
-for cmd in bluetoothctl btmon; do
+for cmd in bluetoothctl btmon hciconfig; do
   if command -v "$cmd" >/dev/null 2>&1; then
     echo "$cmd: $(command -v "$cmd")"
   else
