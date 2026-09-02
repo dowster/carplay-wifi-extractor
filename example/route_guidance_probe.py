@@ -121,55 +121,46 @@ def experimental_start_guidance(display_ids):
     return CSM_STRUCT.pack(CSM_START, len(params) + 6, RG_START) + params
 
 
-async def handle_identification(stream, args):
-    while True:
-        incoming = await read_csm(stream)
-        print(f"[identify] {incoming}")
-        if isinstance(incoming, StartIdentification):
-            kwargs = dict(
-                name=args.name,
-                model_identifier="bt-rg-probe",
-                manufacturer="dowster-lab",
-                serial_number="bt-rg-probe-001",
-                fireware_version="0.1",
-                hardware_version="0.1",
-                messages_sent_by_accessory=ids_blob(RG_START, RG_STOP),
-                messages_received_from_accessory=ids_blob(RG_UPDATE, RG_MANEUVER, RG_LANES),
-                power_providing_capability=PowerProvidingCapability.NONE,
-                maximum_current_drawn_from_device=Uint16(0),
-                supported_external_accessory_protocol=[],
-                app_match_team_id=None,
-                current_language="en",
-                supported_language=["en"],
-                bluetooth_transport_component=[BluetoothTransportComponent(
-                    id=Uint16(0),
-                    name="Bluetooth",
-                    supports_iap2_connection=True,
-                    bluetooth_transport_mac=args.mac,
-                )],
-            )
-            if args.supports_carplay:
-                kwargs["wireless_car_play_transport_component"] = WirelessCarPlayTransportComponent(
-                    id=Uint16(1),
-                    name="Bluetooth route-guidance probe",
-                    supports_iap2_connection=True,
-                    supports_car_play=True,
-                )
-            await write_csm(stream, IdentificationInformation(**kwargs))
-        elif isinstance(incoming, IdentificationAccepted):
-            print("[identify] accepted")
-            return
-        elif isinstance(incoming, IdentificationRejected):
-            raise RuntimeError(f"identification rejected: {incoming}")
-        else:
-            raise RuntimeError(f"unexpected identification message: {incoming}")
+def identification_information(args):
+    kwargs = dict(
+        name=args.name,
+        model_identifier="bt-rg-probe",
+        manufacturer="dowster-lab",
+        serial_number="bt-rg-probe-001",
+        fireware_version="0.1",
+        hardware_version="0.1",
+        messages_sent_by_accessory=ids_blob(RG_START, RG_STOP),
+        messages_received_from_accessory=ids_blob(RG_UPDATE, RG_MANEUVER, RG_LANES),
+        power_providing_capability=PowerProvidingCapability.NONE,
+        maximum_current_drawn_from_device=Uint16(0),
+        supported_external_accessory_protocol=[],
+        app_match_team_id=None,
+        current_language="en",
+        supported_language=["en"],
+        bluetooth_transport_component=[BluetoothTransportComponent(
+            id=Uint16(0),
+            name="Bluetooth",
+            supports_iap2_connection=True,
+            bluetooth_transport_mac=args.mac,
+        )],
+    )
+    if args.supports_carplay:
+        kwargs["wireless_car_play_transport_component"] = WirelessCarPlayTransportComponent(
+            id=Uint16(1),
+            name="Bluetooth route-guidance probe",
+            supports_iap2_connection=True,
+            supports_car_play=True,
+        )
+    return IdentificationInformation(**kwargs)
 
 
-async def handle_auth(stream, loop):
+async def handle_handshake(stream, args, loop):
     cert = await loop.run_in_executor(None, read_certificate)
-    while True:
+    authenticated = False
+    identified = False
+    while not (authenticated and identified):
         incoming = await read_csm(stream)
-        print(f"[auth] {incoming}")
+        print(f"[handshake] {incoming}")
         if isinstance(incoming, RequestAuthenticationCertificate):
             await write_csm(stream, AuthenticationCertificate(certificate=cert))
         elif isinstance(incoming, RequestAuthenticationChallengeResponse):
@@ -179,21 +170,33 @@ async def handle_auth(stream, loop):
             await write_csm(stream, AuthenticationResponse(response=response))
         elif isinstance(incoming, AuthenticationSucceeded):
             print("[auth] succeeded")
-            return
+            authenticated = True
         elif isinstance(incoming, AuthenticationFailed):
             raise RuntimeError("MFi authentication failed")
+        elif isinstance(incoming, StartIdentification):
+            await write_csm(stream, identification_information(args))
+        elif isinstance(incoming, IdentificationAccepted):
+            print("[identify] accepted")
+            identified = True
+        elif isinstance(incoming, IdentificationRejected):
+            raise RuntimeError(f"identification rejected: {incoming}")
         else:
-            raise RuntimeError(f"unexpected authentication message: {incoming}")
+            raise RuntimeError(f"unexpected handshake message: {incoming}")
 
 
 async def probe_connection(reader, writer, args, loop):
     print("[probe] RFCOMM connection accepted")
-    conn = IAP2Connection(writer, reader, loop, max_outgoing=4)
+    conn = IAP2Connection(
+        writer,
+        reader,
+        loop,
+        max_outgoing=4,
+        on_error=lambda exc: print(f"[probe] iAP2 link error: {exc}"),
+    )
     conn.start()
     stream = conn.control_session
 
-    await handle_identification(stream, args)
-    await handle_auth(stream, loop)
+    await handle_handshake(stream, args, loop)
 
     print("[probe] authenticated iAP2-over-Bluetooth session established")
     print("[probe] start Apple Maps navigation on the phone now")
@@ -229,7 +232,13 @@ async def async_main(args):
         register_csm(cls)
 
     def on_connection(reader, writer):
-        asyncio.create_task(probe_connection(reader, writer, args, loop))
+        task = asyncio.create_task(probe_connection(reader, writer, args, loop))
+
+        def report_failure(completed):
+            if not completed.cancelled() and completed.exception() is not None:
+                print(f"[probe] connection failed: {completed.exception()}")
+
+        task.add_done_callback(report_failure)
 
     print(f"[probe] adapter={args.adapter} mac={':'.join(f'{b:02X}' for b in args.mac)}")
     print(f"[probe] supports_carplay={args.supports_carplay} bonjour=False")

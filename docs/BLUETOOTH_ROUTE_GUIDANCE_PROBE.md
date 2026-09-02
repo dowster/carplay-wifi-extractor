@@ -119,6 +119,25 @@ Expected progression:
 6. Authentication success/failure
 7. Control-session messages, if authentication succeeds
 
+### Verified on a real iPhone
+
+On September 2, 2026, an iPhone successfully completed the following sequence
+against BlueZ 5.64 on `hci0`:
+
+1. Browsed the Linux SDP database and found `00000000-deca-fade-deca-deafdecacaff`
+   on RFCOMM channel 3.
+2. Opened the RFCOMM channel and exchanged the iAP2 support marker.
+3. Completed iAP2 link synchronization.
+4. Sent `RequestAuthenticationCertificate` (`0xAA00`) before Identification.
+5. Rejected the repository's emulated certificate with `AuthenticationFailed`
+   (`0xAA04`), while iOS displayed “Accessory Not Supported.”
+
+This confirms that Class of Device `0x7a020c`, inquiry/page scanning, and the
+registered SDP record are sufficient to reach iAP2 on the tested phone. The
+commented custom `hciconfig ... inqdata ...` payload was not applied and is not
+required for this milestone. Do not commit `btmon` captures: pairing captures
+can contain Bluetooth link keys.
+
 ## Test B: advertise CarPlay capability, still no display/video
 
 If Test A authenticates but does not expose Route Guidance:
@@ -141,10 +160,14 @@ authentication:
 
 ```bash
 export IAP2_EMULATE_MFI=0
+export IAP2_MFI_I2C_BUS=/dev/i2c-11
 ```
 
 and connect a compatible/authorized MFi authentication coprocessor through
 `example/iap2/mfi_auth_coprocessor.py`.
+
+When hardware mode is explicitly enabled, the probe now fails instead of
+silently reverting to emulation if the configured I2C device cannot be opened.
 
 Until a real iPhone reaches `AuthenticationSucceeded`, lack of Route Guidance is
 not evidence that Bluetooth-only guidance is unavailable.

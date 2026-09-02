@@ -85,12 +85,16 @@ class IAPProfile(dbus.service.Object):
     def NewConnection(self, device, fd, opts):
         print("new bluetooth connection", device, self.__path)
         raw_fd = fd.take()
-        s = socket.fromfd(raw_fd, socket.AF_BLUETOOTH, socket.SOCK_STREAM, socket.BTPROTO_RFCOMM)
-        s.settimeout(None)
+        s = socket.socket(fileno=raw_fd)
+        s.setblocking(False)
 
         async def on_connection():
-            reader, writer = await asyncio.open_connection(sock=s)
-            self.on_connection(reader, writer)
+            try:
+                reader, writer = await asyncio.open_connection(sock=s)
+                self.on_connection(reader, writer)
+            except Exception as exc:
+                s.close()
+                print(f"[bluez] Failed to adopt RFCOMM connection from {device}: {exc}")
 
         self._loop.call_soon_threadsafe(lambda: asyncio.create_task(on_connection()))
 
