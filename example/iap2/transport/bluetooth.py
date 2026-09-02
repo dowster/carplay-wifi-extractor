@@ -10,8 +10,6 @@ import dbus.service
 from dbus.mainloop.glib import DBusGMainLoop
 from gi.repository import GLib
 
-import iap2.carplay_bonjour as carplay_bonjour
-
 BUS_NAME = 'org.bluez'
 PROFILE_INTERFACE = 'org.bluez.Profile1'
 AGENT_INTERFACE = 'org.bluez.Agent1'
@@ -62,7 +60,7 @@ class Agent(dbus.service.Object):
         print("RequestConfirmation (%s, %06d)" % (device, passkey))
         time.sleep(2)
 
-    @dbus.service.method(AGENT_INTERFACE, in_signature="o", out_signature="")
+    @dbus.service.method(dbus_interface=AGENT_INTERFACE, in_signature="o", out_signature="")
     def RequestAuthorization(self, device):
         print("RequestAuthorization (%s)" % device)
 
@@ -167,11 +165,15 @@ class BluetoothTransport:
         adapter.Set("org.bluez.Adapter1", 'Discoverable', True)
         adapter.Set("org.bluez.Adapter1", 'Pairable', True)
         if self._advertise_bonjour:
+            # Avahi is only required for the full wireless-CarPlay path. Keep it
+            # out of the Bluetooth-only probe's import graph entirely.
             try:
+                import iap2.carplay_bonjour as carplay_bonjour
+
                 adapter_addr = str(adapter.Get("org.bluez.Adapter1", "Address"))
                 carplay_bonjour.start_service(adapter_addr)
-            except dbus.DBusException as exc:
-                print(f"[bluez] Unable to read adapter address for Bonjour: {exc}.")
+            except (ImportError, dbus.DBusException) as exc:
+                print(f"[bluez] Bonjour unavailable, skipping advertisement: {exc}.")
         else:
             print("[bluez] CarPlay Bonjour advertisement disabled (Bluetooth-only probe mode).")
 
