@@ -1,0 +1,42 @@
+[tools]
+python = "3.11"
+uv = "latest"
+
+[tasks.setup]
+description = "Create/sync the uv virtualenv and install development dependencies"
+run = "uv sync"
+
+[tasks.setup-full]
+description = "Install dependencies used by the wider original example code"
+run = "uv sync --extra full"
+
+[tasks.doctor]
+description = "Check the Bluetooth-route-guidance Python environment and host tools"
+run = '''
+set -eu
+uv run python - <<'PY'
+import sys
+import dbus
+from gi.repository import GLib
+import smbus2
+print(f"python: {sys.version.split()[0]}")
+print("python imports: dbus, gi/GLib, smbus2: ok")
+PY
+for cmd in bluetoothctl btmon; do
+  if command -v "$cmd" >/dev/null 2>&1; then
+    echo "$cmd: $(command -v "$cmd")"
+  else
+    echo "$cmd: MISSING (install BlueZ tools)" >&2
+  fi
+done
+'''
+
+[tasks.probe]
+description = "Run the Bluetooth-only iAP2 Route Guidance probe"
+depends = ["setup"]
+run = "uv run python example/route_guidance_probe.py"
+
+[tasks.test]
+description = "Run Python tests"
+depends = ["setup"]
+run = "uv run pytest"
