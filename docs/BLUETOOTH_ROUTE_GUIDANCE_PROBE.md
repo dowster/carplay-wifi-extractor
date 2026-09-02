@@ -17,16 +17,21 @@ The branch has a root `mise.toml` and `pyproject.toml`.
 `mise` provides the pinned Python runtime and `uv`; `uv` creates `.venv` and
 manages the Python dependencies.
 
-From the repository root:
+From the repository root on Fedora:
 
 ```bash
 mise trust
 mise install
+mise run bootstrap-fedora
 mise run setup
 mise run doctor
 ```
 
-Equivalent commands without the mise tasks are:
+`bootstrap-fedora` installs the native build/runtime libraries needed by
+`dbus-python`, `PyGObject`, and its `pycairo` dependency. `uv` then owns only the
+Python environment.
+
+Equivalent Python setup without the mise task is:
 
 ```bash
 mise install
@@ -44,14 +49,18 @@ The Bluetooth transport uses BlueZ over D-Bus and GLib/PyGObject. Those have
 native build/runtime dependencies that should be installed through the OS rather
 than hidden in the Python environment.
 
-Fedora-family example:
+Fedora-family example (also available as `mise run bootstrap-fedora`):
 
 ```bash
 sudo dnf install -y \
-  bluez bluez-tools \
-  gcc pkgconf-pkg-config \
-  dbus-devel glib2-devel \
-  gobject-introspection-devel cairo-gobject-devel
+  gcc gcc-c++ \
+  pkgconf-pkg-config \
+  cairo-devel \
+  glib2-devel \
+  gobject-introspection-devel \
+  libffi-devel \
+  dbus-devel \
+  bluez bluez-tools
 ```
 
 Debian/Ubuntu-family example:
@@ -60,14 +69,16 @@ Debian/Ubuntu-family example:
 sudo apt update
 sudo apt install -y \
   bluez \
-  gcc pkg-config \
+  build-essential pkg-config \
+  libcairo2-dev \
   libdbus-1-dev libglib2.0-dev \
-  libgirepository-2.0-dev libcairo2-dev
+  libgirepository-2.0-dev libffi-dev
 ```
 
 Package names vary slightly by distro release. If `uv sync` fails while building
-`dbus-python` or `PyGObject`, the missing item is normally one of these native
-`-devel`/`-dev` packages.
+`pycairo`, `dbus-python`, or `PyGObject`, the missing item is normally one of
+these native `-devel`/`-dev` packages. In particular, a `pycairo` build failure
+on Fedora usually means `cairo-devel` was not installed.
 
 ## Linux Bluetooth prerequisites
 
